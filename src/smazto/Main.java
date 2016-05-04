@@ -13,7 +13,7 @@ public class Main {
 		robot1.turnRight();
 		robot1.forward();
 		robot1.forward();
-		robot1.turnRight();
+		robot1.turnLeft();
 		robot1.turnLeft();
 
 		System.out.println(robot1);
