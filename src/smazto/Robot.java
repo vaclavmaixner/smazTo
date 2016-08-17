@@ -32,8 +32,21 @@ public class Robot extends Object {
 		turnAround();
 	}
 
+	public String getDirectionName() {
+		if (direction == 0) {
+			return "North";
+		}
+		if (direction == 1) {
+			return "East";
+		}
+		if (direction == 2) {
+			return "South";
+		}
+		return "West";
+	}
+
 	@Override
 	public String toString() {
-		return "Robot [direction=" + direction + ", x=" + x + ", y=" + y + "]";
+		return "Robot [direction=" + getDirectionName() + ", x=" + x + ", y=" + y + "]";
 	}
 }
