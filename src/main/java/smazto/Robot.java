@@ -32,7 +32,7 @@ public class Robot extends Object {
 		turnAround();
 	}
 
-	public String getDirectionName() {
+	public String getDirectionName() { // toto yjednodusit - vycet, switch
 		if (direction == 0) {
 			return "North";
 		}
