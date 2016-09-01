@@ -3,21 +3,14 @@ package smazto;
 public class Main {
 
 	public static void main(String[] args) {
-		Robot robot1 = new Robot();
+		// Robot robot1 = new Robot();
 
-		robot1.turnRight();
-		robot1.turnRight();
-		robot1.forward();
-		robot1.backward();
-		robot1.forward();
-		robot1.turnRight();
-		robot1.forward();
-		robot1.forward();
-		robot1.turnLeft();
-		robot1.turnLeft();
+		Terminal terminal1 = new Terminal();
 
-		System.out.println(robot1);
+		// System.out.println(robot1);
 
+		// tady se zavola trida, ktera otevre terminal a bude cekat na prikaz
+		// uzivatele
 	}
 
 }
