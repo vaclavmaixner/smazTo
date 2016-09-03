@@ -9,9 +9,15 @@ import javax.swing.JFrame;
 
 public class Gui extends JComponent {
 	private static Color m_tBlack = new Color(0, 0, 0, 150);
+	
 	private int changeX;
 	private int changeY;
 
+	//pokus o vymalovani robota tam, kde prave stoji
+	public void paintRobot(x, y) {
+		g.fillRect(x, y, (x+20), (y+20));
+	}
+	
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
