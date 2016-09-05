@@ -6,6 +6,11 @@ public class Terminal {
 
 	private String command; // variable that works with the user input
 	private Robot robot1 = new Robot(); // new instance of class Robot
+	private final RobotDisplay display;
+
+	public Terminal(RobotDisplay display) {
+		this.display = display;
+	}
 
 	// public void readUserCommand() {
 
@@ -13,7 +18,7 @@ public class Terminal {
 
 	public void commandLoop() {
 		// inicializace - vytisknout pocatecni stav a pripravit user input
-		System.out.println(robot1);
+		display.displayRobot(robot1);
 		Scanner scan = new Scanner(System.in); // scanner gets user input
 		// command = "go";
 
@@ -23,6 +28,7 @@ public class Terminal {
 			executeCommand();
 		}
 		scan.close();
+		// ll
 	}
 
 	private void executeCommand() {
@@ -47,10 +53,11 @@ public class Terminal {
 	}
 
 	public static void main(String[] args) {
-		Terminal robot1 = new Terminal();
+		Gui gui = new Gui();
+		Gui.open(gui);
+		Terminal robot1 = new Terminal(new GuiRobotDisplay(gui));
 
 		// robot1.readUserCommand();
 		robot1.commandLoop();
 	}
-
 }
